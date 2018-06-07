@@ -37,9 +37,9 @@ public class NormalActivity extends BaseActivity<NormalView,NormalPresenter> imp
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  showLoadingDialog("登录中...");
-               // mPresenter.getData();
-                showWarningDialog("","");
+                showLoadingDialog("登录中...");
+                mPresenter.getData();
+                //showWarningDialog("","");
             }
         });
     }
@@ -54,7 +54,7 @@ public class NormalActivity extends BaseActivity<NormalView,NormalPresenter> imp
 
     @Override
     public String mUsername() {
-        return "1508443896";
+        return "15084438964";
     }
 
     @Override
@@ -65,7 +65,8 @@ public class NormalActivity extends BaseActivity<NormalView,NormalPresenter> imp
     @Override
     public void setSuccessData(Object o) {
         dismissLoadingDialog();
-        openActivity(ListActivity.class);
+       openActivity(ListActivity.class);
+       // openActivity(MainActivity.class);
     }
 
     @Override

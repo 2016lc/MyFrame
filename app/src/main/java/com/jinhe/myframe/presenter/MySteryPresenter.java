@@ -21,11 +21,11 @@ public class MySteryPresenter extends BaseListPresenter<MysteryBean.DataBean>{
     protected void onAllSuccess(Object o) {
         MysteryBean mysteryBean = (MysteryBean) o;
         if(mysteryBean.rel){
-            if(mysteryBean.getData()==null){
-                listView.showEmptyData();
-                return;
-            }
             if(mode == RequestMode.REFRESH){
+                if(mysteryBean.getData()==null||mysteryBean.getData().size()==0){
+                    listView.showEmptyData();
+                    return;
+                }
                 listView.showFinishDate(mysteryBean.getData());
             }else {
                 listView.showLoadMoreData(mysteryBean.getData());
