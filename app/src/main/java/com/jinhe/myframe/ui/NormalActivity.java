@@ -38,7 +38,7 @@ public class NormalActivity extends BaseActivity<NormalView,NormalPresenter> imp
             @Override
             public void onClick(View v) {
                 showLoadingDialog("登录中...");
-                mPresenter.getData();
+             //   mPresenter.getData();
                 //showWarningDialog("","");
             }
         });
