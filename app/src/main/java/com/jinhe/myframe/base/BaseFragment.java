@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+
 /**
  * Created by LC on 2018/5/26.
  */
@@ -162,7 +163,7 @@ public abstract class BaseFragment<V extends BaseView,Z extends BasePresenter<V>
                     .setConfirmText("确定")
                     .show();
         }
-        pDialog.setConfirmButton("确定", new SweetAlertDialog.OnSweetClickListener() {
+        pDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 dismissLoadingDialog();

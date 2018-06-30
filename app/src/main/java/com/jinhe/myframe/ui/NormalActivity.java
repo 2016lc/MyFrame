@@ -1,17 +1,14 @@
 package com.jinhe.myframe.ui;
 
-import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.jinhe.myframe.dialog.MyDialog;
 import com.jinhe.myframe.view.NormalView;
 import com.jinhe.myframe.R;
 import com.jinhe.myframe.base.BaseActivity;
 import com.jinhe.myframe.presenter.NormalPresenter;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * Created by LC on 2018/5/28.
@@ -38,7 +35,7 @@ public class NormalActivity extends BaseActivity<NormalView,NormalPresenter> imp
             @Override
             public void onClick(View v) {
                 showLoadingDialog("登录中...");
-             //   mPresenter.getData();
+                mPresenter.getData();
                 //showWarningDialog("","");
             }
         });

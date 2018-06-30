@@ -10,9 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
-import com.jinhe.myframe.R;
-
 import cn.pedant.SweetAlert.SweetAlertDialog;
+
 
 /**
  * Created by LC on 2018/5/26.
@@ -108,12 +107,12 @@ public abstract class BaseActivity<V extends BaseView,Z extends BasePresenter<V>
                     .setConfirmText("确定")
                     .show();
         }
-        pDialog.setConfirmButton("确定", new SweetAlertDialog.OnSweetClickListener() {
-            @Override
-            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                dismissLoadingDialog();
-            }
-        });
+       pDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+           @Override
+           public void onClick(SweetAlertDialog sweetAlertDialog) {
+               dismissLoadingDialog();
+           }
+       });
     }
 
     @Override
