@@ -52,6 +52,8 @@ dependencies {
     //butternife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //导航栏
+    implementation 'com.jaeger.statusbarutil:library:1.4.0'
     implementation project(':library')
 }
 repositories {

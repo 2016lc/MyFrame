@@ -26,7 +26,7 @@ public abstract class BaseFragment<V extends BaseView,Z extends BasePresenter<V>
     protected Activity mContext;
     protected View mRootView;
     public Z mPresenter;
-    private View mContextView;
+   // private View mContextView;
     private SweetAlertDialog pDialog;
     protected boolean isInit = false;
     protected boolean isLoad = false;
